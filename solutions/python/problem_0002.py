@@ -1,8 +1,12 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+from typing import Optional, List
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         values_int: List[int] = [0, 0]
@@ -15,14 +19,14 @@ class Solution:
                 values_int[idx] += current_node.val * multiplier
                 current_node = current_node.next
                 multiplier *= 10
-    
+
         two_value_sum: int = sum(values_int)
 
         two_value_sum_list: List[int] = []
         while two_value_sum > 0:
-            two_value_sum_list.append(two_value_sum%10)
+            two_value_sum_list.append(two_value_sum % 10)
             two_value_sum //= 10
-        
+
         two_value_sum_list.reverse()
 
         listnode_cursor: Optional[ListNode] = None
