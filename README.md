@@ -1,2 +1,2 @@
 # leetcode
-My Leetcode Solutions (mostly Python)
+My Leetcode Solutions (mostly Python, learning Rust)
