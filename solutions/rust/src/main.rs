@@ -1,5 +1,5 @@
-mod problem_0203;
+mod problem_0874;
 
 fn main() {
-    problem_0203::run_tests();
+    problem_0874::run_tests();
 }
